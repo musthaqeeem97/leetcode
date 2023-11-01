@@ -26,7 +26,7 @@ public class Ex76MinumumWindowSubString {
 			char rightChar = s.charAt(r);
 		  // Decrease the frequency of the current character in the map
 			if (targetMap.containsKey(rightChar)) {
-				targetMap.put(rightChar, targetMap.get(rightChar)+1);
+				targetMap.put(rightChar, targetMap.get(rightChar)-1);
 				if (targetMap.get(rightChar)>=0) {
 					count ++;
 				}
@@ -44,7 +44,7 @@ public class Ex76MinumumWindowSubString {
 				char leftChar = s.charAt(l);
 				
 				if (targetMap.containsKey(leftChar)) {
-					targetMap.put(leftChar, targetMap.get(rightChar)+1);	
+					targetMap.put(leftChar, targetMap.get(leftChar)+1);	
 					if (targetMap.get(leftChar)>0) {
 						count--;
 					}
